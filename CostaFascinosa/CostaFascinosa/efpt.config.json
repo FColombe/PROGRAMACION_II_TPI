@@ -1,0 +1,162 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "COSTA_FASCINOSAContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Data",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "CostaFascinosa",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[ACTIVIDADES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AMENITIES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CATEGORIAS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[COD_VESTIMENTAS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CONSUMOS_GASTRONOMICOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CONSUMOS_HABITACIONES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CONTACTOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[COORDINADORES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DESTINATARIOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ESTADOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HABITACIONES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NACIONALIDADES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PASAJEROS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PREFERENCIAS_ALIMENTICIAS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PRODUCTOS_GASTRONOMICOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RESENAS_ACTIVIDADES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RESENAS_AMENITIES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RESENAS_SERVICIOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RESERVAS_ACTIVIDADES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RESERVAS_SERVICIOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SERVICIOS_GASTRONOMICOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TEMATICAS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TIPO_CONTACTOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TIPOS_DOCUMENTOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TIPOS_HABITACIONES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TIPOS_PRODUCTOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TIPOS_SERVICIOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TURNOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[USUARIOS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ZONAS]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

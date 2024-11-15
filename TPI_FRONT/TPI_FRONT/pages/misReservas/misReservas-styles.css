@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Breathing";
+    src: url("/tipograph/Breathing.ttf") format("truetype");
+}
+
+/* General */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222222;
+    max-height: max-content;
+    width: 100%;
+    
+}
+
+.header-area {
+    background-color: #084256;
+    padding: 10px;
+}
+
+.header-area .navbar-brand img {
+    width: 90px;
+}
+
+.cf{
+    font-family: "Breathing", sans-serif;
+    color:  #cb8f14;
+    font-size: 1.7rem;
+}
+
+.mis{
+    font-family: 'Raleway', sans-serif;
+    color: #f4f4f4;
+}
+
+.mis :hover{
+    color: #cb8f14;
+}
+
+.nav-link.dropdown-toggle:hover {
+    color: #cb8f14; 
+    background-color: transparent; 
+}
+.nav-link.dropdown-toggle:focus {
+    color:inherit; 
+    background-color: transparent; 
+}
+
+.nav-link.dropdown-toggle:visited {
+    color:inherit; 
+    background-color: transparent; 
+}
+
+
+.titulo{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 600;
+    font-size: 3.9rem;
+    color: #073342;
+    font-weight: 550;
+}
+
+.titulo2{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #073342;
+    font-weight: 550;
+}
+
+.imgT{
+    width: 50%;
+    transform: rotate(30deg);
+    
+}
+
+
+th{
+    font-weight: 600;
+}
+
+td{
+    font-family: 'Pompiere', sans-serif;
+    text-align: center;
+}
+
+.btn2{
+    background-color: #DC143C;
+    font-family: 'Raleway', sans-serif;
+    color: #f4f4f4;
+    padding: 8px;
+}
+
+
+
+
+
+.btn-submit {
+    font-family: 'Pompiere', sans-serif;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #cb8f14;
+    border-style: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.btn-submit :hover{
+    font-weight: bolder;
+}
+
+.table-responsive {
+    margin-top: 1.5rem;
+}
+
+
+footer {
+    background-color: #084256;
+    font-size: 0.8rem;
+    color: #f4f4f4;
+}
+
+
+
+/* Ajustes generales de margenes y espaciado para dispositivos pequeños */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .table th, .table td {
+        padding: 0.5rem;
+    }
+}

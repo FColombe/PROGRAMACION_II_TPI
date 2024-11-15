@@ -1,0 +1,99 @@
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.sourcelink.json
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\pbenj\OneDrive\Desktop\CopiaFuncional\tpi_costa_fascinosa\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\pbenj\OneDrive\Desktop\a\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\dario\OneDrive\Escritorio\Benja\costa del pingo\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\pbenj\OneDrive\Desktop\Funciona o me mato\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\usuario\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\pbenj\OneDrive\Desktop\ULTIMO FRONT\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.deps.json
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.runtimeconfig.json
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.dll
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\bin\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.AssemblyReference.cache
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfoInputs.cache
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.AssemblyInfo.cs
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.dll
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\refint\CostaFascinosa.dll
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.pdb
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\CostaFascinosa.genruntimeconfig.cache
+C:\Users\usuario\Downloads\ULTIMO FRONT ENTREGAR\CostaFascinosa\CostaFascinosa\obj\Debug\net8.0\ref\CostaFascinosa.dll

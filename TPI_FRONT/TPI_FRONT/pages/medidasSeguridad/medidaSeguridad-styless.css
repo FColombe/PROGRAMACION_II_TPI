@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y colores */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Estilos de la barra de navegación */
+/* Header Area */
+.header-area {
+    background-color: #084256;
+    padding: 10px;
+    display: flex; /* Usamos flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Imagen del logo */
+.header-area .navbar-brand img {
+    width: 90px;
+}
+
+/* Estilo para el texto de la marca */
+.cf {
+    font-family: 'Breathing', sans-serif;
+    color: #cb8f14;
+    font-size: 1.7rem;
+    margin-left: 15px; /* Agrega espacio entre el logo y el texto */
+}
+
+/* Estilos para los elementos de navegación */
+.mis {
+    font-family: 'Raleway', sans-serif;
+    color: #f4f4f4;
+    margin-right: 15px; /* Espacio entre los elementos de la barra de navegación */
+}
+
+.mis:hover {
+    color: #cb8f14;
+}
+
+/* Estilo para la barra de navegación desplegable */
+.nav-link.dropdown-toggle:hover {
+    color: #cb8f14;
+    background-color: transparent;
+}
+
+.nav-link.dropdown-toggle:focus {
+    color: inherit;
+    background-color: transparent;
+}
+
+.nav-link.dropdown-toggle:visited {
+    color: inherit;
+    background-color: transparent;
+}
+
+/* Títulos y texto */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #084256; /* Celeste */
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #084256; /* Celeste */
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Sección de Medidas de Seguridad */
+#medidasSeguridad {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos comunes de botones */
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 2rem; /* Espacio debajo del botón */
+}
+
+/* Botón "EMERGENCIA TITANIC" (rojo) */
+button.btn-danger {
+    background-color: #dc3545; /* Rojo */
+}
+
+button.btn-danger:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Botón "Volver al Inicio" (celeste) */
+button.btn-primary {
+    background-color: #084256; /* Celeste */
+}
+
+button.btn-primary:hover {
+    background-color: #063c47; /* Un tono más oscuro de celeste */
+}
+
+/* Estilo para el enlace dentro de los botones */
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #084256;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto dentro del footer */
+    height: 100px; /* Ajusta la altura si es necesario */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #fff; /* Puedes cambiar el color si es necesario */
+}
+
+/* Estilos responsivos "Mobile First" */
+@media (min-width: 576px) {
+    #medidasSeguridad {
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #medidasSeguridad {
+        max-width: 900px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+}
+.imagen-chaleco {
+    width: 800px;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    width: 100%;  /* La imagen se ajustará al contenedor */
+
+}
+
+.imagen-bote {
+    width: 800px;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    width: 100%;  /* La imagen se ajustará al contenedor */
+}
+
+.img-container {
+    width: 300px;  /* Ancho fijo para el contenedor */
+    margin: 0 auto;  /* Esto centra el contenedor en la página */
+  }
+  
+  img {
+    width: 100%;  /* La imagen se ajustará al contenedor */
+  }
+  

@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Downloads\\ULTIMO FRONT ENTREGAR\\CostaFascinosa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E705E61-2EEF-4E08-970D-6AC1EC8E6BE7}|API_CostaFascinosa\\API_CostaFascinosa.csproj|c:\\users\\usuario\\downloads\\ultimo front entregar\\costafascinosa\\api_costafascinosa\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8E705E61-2EEF-4E08-970D-6AC1EC8E6BE7}|API_CostaFascinosa\\API_CostaFascinosa.csproj|solutionrelative:api_costafascinosa\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2FDA461-54CB-4A13-8FDF-A18C0399A946}|CostaFascinosa\\CostaFascinosa.csproj|c:\\users\\usuario\\downloads\\ultimo front entregar\\costafascinosa\\costafascinosa\\repositorio\\implementacion\\consumoshabitacione_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2FDA461-54CB-4A13-8FDF-A18C0399A946}|CostaFascinosa\\CostaFascinosa.csproj|solutionrelative:costafascinosa\\repositorio\\implementacion\\consumoshabitacione_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\ULTIMO FRONT ENTREGAR\\CostaFascinosa\\API_CostaFascinosa\\appsettings.json",
+              "RelativeDocumentMoniker": "API_CostaFascinosa\\appsettings.json",
+              "ToolTip": "C:\\Users\\usuario\\Downloads\\ULTIMO FRONT ENTREGAR\\CostaFascinosa\\API_CostaFascinosa\\appsettings.json",
+              "RelativeToolTip": "API_CostaFascinosa\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-15T18:43:42.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConsumosHabitacione_repository.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\ULTIMO FRONT ENTREGAR\\CostaFascinosa\\CostaFascinosa\\Repositorio\\Implementacion\\ConsumosHabitacione_repository.cs",
+              "RelativeDocumentMoniker": "CostaFascinosa\\Repositorio\\Implementacion\\ConsumosHabitacione_repository.cs",
+              "ToolTip": "C:\\Users\\usuario\\Downloads\\ULTIMO FRONT ENTREGAR\\CostaFascinosa\\CostaFascinosa\\Repositorio\\Implementacion\\ConsumosHabitacione_repository.cs",
+              "RelativeToolTip": "CostaFascinosa\\Repositorio\\Implementacion\\ConsumosHabitacione_repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T18:42:32.966Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

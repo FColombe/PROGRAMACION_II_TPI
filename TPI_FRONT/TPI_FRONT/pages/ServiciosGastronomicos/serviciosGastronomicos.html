@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Gastronómicos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pompiere&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="serviciosGastronomicos-styles.css">
+</head>
+
+<body>
+
+    <header class="header-area mb-5">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/TPI_FRONT/pages/principal.html">
+                    <img src="/img/Logo.png" alt="Logo">
+                </a>
+                <h1 class="cf">Costa Fascinosa</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mis"><a class="nav-link mis"
+                                href="/pages/principal/principal.html">Inicio</a></li>
+                        <li class="nav-item mis"><a class="nav-link mis"
+                                href="../Actividades/actividades.html">Actividades</a></li>
+                        <li class="nav-item mis"><a class="nav-link mis"
+                                href="/pages/Amenities/amenities.html">Amenities</a></li>
+                        <li class="nav-item dropdown mis">
+                            <a class="nav-link dropdown-toggle mis" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Más Opciones</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/pages/misReservas/misReservas.html">Mis Reservas</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/pages/misConsumos/misConsumos.html">Mis Consumos</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/pages/miPerfil/miPerfil.html">Mi Perfil</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mis"><a class="nav-link mis" href="/pages/acercaDe/acercaDe.html">Acerca
+                                De</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mt-5 mb-5 imgfondo container-fluid">
+        <section style="width: 100vw;" class="mt-5">
+            <div class="container mt-5 mb-5">
+                <div class="exp titulo">
+                    <h1 class="titulo mt-5 ms-3 pb-4">Experiencias Gastronómicas</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container mb-5">
+        <section>
+            <div class="row toctoc">
+                <div class="col-6 servhab ms-5">
+                    <h2 class="pb-4 ps-5" style="line-height: 1.8;" id="serviceModalLabel">¿No tienes ganas de salir
+                        hoy?</h2>
+                    <p class="pb-4 ps-5">Pide el servicio a la habitación y pronto estaremos en tu puerta.</p>
+                    <button type="button" class="btn-toc mt-3 ms-5" data-bs-toggle="modal"
+                        data-bs-target="#fullscreenModal">
+                        TOC - TOC
+                    </button>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <img class="imgbandeja" src="/img/bandeja.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- Modal para el servicio TOC-TOC -->
+            <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="fullscreenModalLabel">TOC - TOC</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>¡Bienvenido al servicio a la habitación!</p>
+                            <p>¿Qué deseas pedir?</p>
+                        </div>
+                        <div class="container my-5">
+                            <form id="orderForm" class="w-75">
+                                <!-- Acordeón dinámico del menú de productos -->
+                                <div class="accordion" id="restaurantMenuAccordion"></div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-aceptar" id="confirmarReserva">Aceptar</button>
+                            <button type="button" class="btn btn-canc" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="raya"></div>
+    </div>
+    
+
+    <div class="container mt-5">
+        <section>
+            <div class="explora mt-5">
+                <div class="bar">
+                    <h2 class="titulo2 mt-5">Bares y Restaurantes</h2>
+                    <p class="pb-4 mt-4">Explora nuestra oferta gastronómica y descubre los sabores que hemos preparado
+                        para ti en este viaje.</p>
+                </div>
+                <div class="mb-4 filtrar">
+                    <label for="categoriaSelect" class="form-label">Filtrar por:</label>
+                    <select class="form-select filtro" id="categoriaSelect">
+                        <option hidden selected>Tipos de servicio...</option>
+                    </select>
+                </div>
+                <div class="container mt-5">
+                    <div class="row" id="row_servicios"></div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Modal para reservas gastronómicas -->
+    <div class="modal fade" id="modalReservaGastronomica" tabindex="-1" aria-labelledby="modalReservaGastronomicaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalReservaGastronomicaLabel">Reserva Gastronómica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formReservaGastronomica">
+                        <div class="mb-3">
+                            <label for="fechaReservaGastronomica" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="fechaReservaGastronomica" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidadPersonas" class="form-label">Personas</label>
+                            <input type="number" min="1" value="1" class="form-control" id="cantidadPersonas" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="horaReservaGastronomica" class="form-label">Hora</label>
+                            <input type="time" class="form-control" id="horaReservaGastronomica" required>
+                        </div>
+                        <input type="hidden" id="servicioIdGastronomico">
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button type="button" class="btn btn-aceptar me-3" id="confirmarReservaGastronomica">Aceptar</button>
+                    <button type="button" class="btn btn-canc" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white text-center pt-4 mt-5 pb-1">
+        <p>&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="serviciosGastronomicos-App.js"></script>
+</body>
+
+</html>

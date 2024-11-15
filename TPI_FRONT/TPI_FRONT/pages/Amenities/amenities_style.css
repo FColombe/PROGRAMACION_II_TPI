@@ -1,0 +1,305 @@
+@font-face {
+    font-family: "Breathing";
+    src: url("/tipograph/Breathing.ttf") format("truetype");
+}
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    color: #343a40;
+}
+
+  .header-area {
+      background-color: #084256;
+      padding: 10px;
+  }
+  
+  .header-area .navbar-brand img {
+      width: 90px;
+  }
+  
+  .cf{
+      font-family: "Breathing", sans-serif;
+      color:  #cb8f14;
+      font-size: 1.7rem;
+  }
+  
+  .mis{
+      font-family: 'Raleway', sans-serif;
+      color: #f4f4f4;
+  }
+  
+  .mis :hover{
+      color: #cb8f14;
+  }
+  
+  .nav-link.dropdown-toggle:hover {
+      color: #cb8f14; 
+      background-color: transparent; 
+  }
+  .nav-link.dropdown-toggle:focus {
+      color:inherit; 
+      background-color: transparent; 
+  }
+  
+  .nav-link.dropdown-toggle:visited {
+      color:inherit; 
+      background-color: transparent; 
+  }
+
+
+
+
+.exp{
+    background-color: rgb(203, 143, 20, 0.9);
+    height: 125px;
+    width: 900px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: -260px;
+    z-index: 1;
+}
+
+
+.titulo{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: bolder;
+    font-size: 4.5rem;
+    color:#073342;
+    font-weight: 550;
+    padding-left: 40px;
+}
+
+.titulo2{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 900;
+    font-size: 3.7rem;
+    color: #073342;
+    font-weight: 550;
+}
+
+.bar{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.filtrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-right: 20px;
+    font-size: 1rem;
+}
+
+.filtro{
+    width: 30%;
+}
+
+/* Hero Section */
+
+.hero-carrusel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slide 15s infinite;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+
+/*cardsss*/
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #084256;
+    font-family: 'Pompiere';
+
+}
+
+.card-text {
+    font-size: 15px;
+    color: #4e5459;
+    font-family: 'Raleway';
+}
+
+.activities-item-description {
+    font-size: 15px;
+    font-family: 'Raleway';
+    color: #cb8f14;
+}
+
+.btn-reservar {
+    background-color: #084256;
+    color: #f4f4f4;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.btn-reservar:hover {
+    background-color: #cb8f14;
+}
+
+.amenity-card {
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen de fondo  tuve que modificar el js*/
+.amenity-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 180px; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+
+}
+[data-amenity="Piscina principal"]::before {
+    background-image: url('/TPI_FRONT/img/PiscinaPrincipal.jpg');
+}
+
+[data-amenity="Gimnasio"]::before {
+    background-image: url('/TPI_FRONT/img/GYM.avif');
+}
+
+[data-amenity="Spa"]::before {
+    background-image: url('/TPI_FRONT/img/SPA.jpg');
+}
+
+[data-amenity="Casino"]::before {
+    background-image: url('/TPI_FRONT/img/CASINO.jpg');
+}
+
+[data-amenity="Sala de juegos"]::before {
+    background-image: url('/TPI_FRONT/img/Sala-JUEGOS.jpg');
+}
+
+[data-amenity="Biblioteca"]::before {
+    background-image: url('/TPI_FRONT/img/BIBLIOTECA.avif');
+}
+.amenity-card .card-body {
+    margin-top: 160px;
+}
+.amenity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+footer {
+    background-color: #084256;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+/* Diseño móvil */
+@media (max-width: 768px) {
+    /* Ajustes de navegación */
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustes del video en la hero section */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes de las tarjetas */
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 0.8rem;
+    }
+
+    .activities-item-rating {
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste de contenedores */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Espaciado entre tarjetas */
+    .col-md-6.col-lg-3.mb-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajuste adicional para pantallas pequeñas */
+@media (max-width: 576px) {
+    /* Ajustes de las tarjetas */
+    .card-title {
+        font-size: 0.9rem;
+    }
+
+    .card-text,
+    .activities-item-price,
+    .activities-item-description {
+        font-size: 0.8rem;
+    }
+
+    /* Ocultar título de la barra de navegación en pantalla muy pequeña */
+    .navbar h1 {
+        display: none;
+    }
+}

@@ -1,0 +1,480 @@
+
+@font-face {
+    font-family: "Breathing";
+    src: url("/tipograph/Breathing.ttf") format("truetype");
+}
+
+/* General */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222222;
+    max-height: max-content;
+    width: 100%;
+    
+}
+
+.header-area {
+    background-color: #084256;
+    padding: 10px;
+}
+
+.header-area .navbar-brand img {
+    width: 90px;
+}
+
+.cf{
+    font-family: "Breathing", sans-serif;
+    color:  #cb8f14;
+    font-size: 1.7rem;
+}
+
+.mis{
+    font-family: 'Raleway', sans-serif;
+    color: #f4f4f4;
+}
+
+.mis :hover{
+    color: #cb8f14;
+}
+
+.nav-link.dropdown-toggle:hover {
+    color: #cb8f14; 
+    background-color: transparent; 
+}
+.nav-link.dropdown-toggle:focus {
+    color:inherit; 
+    background-color: transparent; 
+}
+
+.nav-link.dropdown-toggle:visited {
+    color:inherit; 
+    background-color: transparent; 
+}
+
+
+.imgfondo{
+    background-image: url(/img/fondoresto.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    width: auto;
+    display: flex;
+    align-items: first baseline;
+    
+}
+
+.exp{
+    background-color: rgb(203, 143, 20, 0.95);
+    height: 120px;
+    width: 75%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+.titulo{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 700;
+    font-size: 3.7rem;
+    color: #073342;
+    font-weight: 550;
+    padding-left: 35px;
+}
+
+.toctoc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.imgbandeja{
+    width: 60%;
+    height: auto;
+    padding-bottom: 30px;
+    margin-right: 100px;
+}
+
+.servhab{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-items: center;
+    text-align: start;
+    padding-top: 85px;
+    width: 35%;
+    overflow: hidden;
+    height: auto;
+}
+
+.btn-toc{
+    font-family: 'Pompiere', sans-serif;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #DC143C;
+    border-style: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+}
+
+.raya{
+    background-color: #cb8f14;
+    height: 5px;
+    width: 90%;
+    align-self: center;
+}
+
+.esplora{
+    display: flex;
+    flex-direction: column; 
+    justify-content: end;
+}
+
+.bar{
+    padding-top: 10px;
+    padding-left: 75px; 
+}
+
+.titulo2{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 900;
+    font-size: 3.9rem;
+    color: #073342;
+    font-weight: 550;
+}
+
+.filtrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-right: 20px;
+    font-size: 1rem;
+}
+
+.filtro{
+    width: 30%;
+}
+
+
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-body {
+    padding: 1rem;
+}
+
+.gastronomy-item-rating {
+    font-size: 0.9rem;
+    color: #ffcc00;
+}
+
+.card-title {
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.card-text,
+.gastronomy-item-price,
+.gastronomy-item-description {
+    font-size: 0.9rem;
+}
+
+.btn-reservar {
+    background-color: #DC143C;
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    color: #f4f4f4;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #cb8f14;
+    font-weight: bold;
+    
+}
+
+.btn-aceptar{
+    background-color: #DC143C;
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    color: #f4f4f4;
+    padding: 8px;
+    width: 100px;
+}
+
+.btn-canc{
+    background-color: #084256;
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    color: #f4f4f4;
+    padding: 8px;
+    width: 100px;
+
+}
+
+
+
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #fdfdfd;
+    font-family: 'Raleway', sans-serif;
+    max-height: none !important; 
+    overflow: visible !important;  
+}
+
+.pedir{
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: none !important; 
+    overflow-y: visible !important; 
+    padding: 10px;
+    height: auto;  
+    padding-left: 30px;
+}
+
+.modal-title{
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color:#DC143C;
+    padding-left: 15px;
+}
+
+.modal-dialog {
+    max-width: 100%; 
+    width: 100%;  
+    height: auto; 
+    margin: 0; 
+}
+
+.modal-body p {
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.5rem;
+    color:#084256;
+    text-align: start;
+}
+
+button{
+    border-color: inherit;
+    box-shadow: none;
+}
+
+.acord{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.accordion-item {
+    
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones del acordeón */
+.accordion-button {
+    background-color:#f8f1e2;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color:#cb8f14;
+    box-shadow: none;
+}
+
+.accordion-button:hover {
+    background-color:#cb8f14;
+    color: #fdfdfd;
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* Estilo para los elementos del acordeón */
+.accordion-body {
+    padding: 15px 20px;
+    background-color: #fafafa;
+    font-size: 1rem;
+    color: #555;
+}
+
+.accordion-body ul {
+    padding-left: 0;
+}
+
+.accordion-body li {
+    list-style: none;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+/* Precio */
+.service-price {
+    color:#084256;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+.modal-footer .btn {
+    background-color: #e74c3c;
+    color: #fff;
+    font-weight: 500;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(231, 76, 60, 0.2);
+   
+}
+
+.modal-footer .btn:hover {
+    background-color:#cb8f14;
+    color: #fff;
+    box-shadow: 0px 6px 15px rgba(192, 57, 43, 0.3);
+}
+
+
+.card-bg-image {
+    height: 150px; /* Ajusta el tamaño según lo necesario */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.card-body {
+    padding-top: 1rem; /* Ajusta según el diseño */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #084256;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+/* Diseño móvil */
+@media (max-width: 768px) {
+    /* Ajustes de navegación */
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustes del video en la hero section */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes de las tarjetas */
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text,
+    .gastronomy-item-price,
+    .gastronomy-item-description {
+        font-size: 0.8rem;
+    }
+
+    .gastronomy-item-rating {
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste de contenedores */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Espaciado entre tarjetas */
+    .col-md-6.col-lg-3.mb-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajuste adicional para pantallas pequeñas */
+@media (max-width: 576px) {
+    /* Ajustes de las tarjetas */
+    .card-title {
+        font-size: 0.9rem;
+    }
+
+    .card-text,
+    .gastronomy-item-price,
+    .gastronomy-item-description {
+        font-size: 0.8rem;
+    }
+
+    /* Ocultar título de la barra de navegación en pantalla muy pequeña */
+    .navbar h1 {
+        display: none;
+    }
+}
+
+/* Estilo para el contenedor del modal */

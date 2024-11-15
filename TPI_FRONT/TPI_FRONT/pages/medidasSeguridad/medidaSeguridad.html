@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Página de Medidas de Seguridad del crucero Costa Fascinosa"
+    />
+    <meta
+      name="keywords"
+      content="Costa Fascinosa, Seguridad, Crucero, Protocolos"
+    />
+    <meta name="author" content="Tu Nombre" />
+
+    <title>Medidas de Seguridad - Costa Fascinosa</title>
+
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <link rel="stylesheet" href="medidaSeguridad-styless.css" />
+  </head>
+
+  <body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-3V7NpTR5Kqz0vgIfGnAL5n5pUcrqSgtFhjsh7AWj4zZlZEP7YXqJgUmxwB6I4gKE"
+      crossorigin="anonymous"
+    />
+
+    <main class="container py-5">
+      <section id="medidasSeguridad" class="text-center">
+        <h1 class="mb-4 text-primary">Medidas de Seguridad</h1>
+        <p class="mb-3">
+          En Costa Fascinosa, la seguridad de nuestros pasajeros es nuestra
+          prioridad. A continuación, le explicamos los procedimientos a seguir
+          en caso de emergencia.
+        </p>
+        <h2 class="mb-3 text-secondary">Protocolo Titanic</h2>
+        <p class="mb-3">
+          En caso de algún evento desafortunado, apriete el siguiente botón.
+        </p>
+      
+        <button class="btn btn-danger mt-5" onclick="activarProtocoloTitanic()">
+          PROTOCOLO TITANIC
+        </button>
+        <h2 class="mb-3 text-secondary">Procedimiento de Emergencia</h2>
+        <p class="mb-3">
+          En caso de una emergencia, todos los tripulantes y pasajeros deben
+          dirigirse a la **proa** del barco, siguiendo las instrucciones del
+          personal a bordo.
+        </p>
+        <p class="mb-3">
+          Es importante permanecer tranquilo y escuchar las indicaciones. El
+          personal entregará **chalecos salvavidas** a cada pasajero y ayudará a
+          colocarlos correctamente. A continuacion las instrucciones para su
+          colocacion:
+          <img
+            src="../../img/chaleco.png"
+            alt="Chaleco salvavidas"
+            class="imagen-chaleco"
+          />
+        </p>
+        <h2 class="mb-3 text-secondary">Uso de Botes Salvavidas</h2>
+        <p class="mb-3">
+          Los **botes salvavidas** están ubicados en la proa del barco y pueden
+          ser utilizados para evacuar a los pasajeros en caso de necesidad.
+          Sigue las instrucciones del personal para abordar los botes de manera
+          segura y ordenada.
+          <img
+            src="../../img/bote.jpg"
+            alt="bote salvavidas"
+            class="imagen-bote"
+          />
+        </p>
+        <h2 class="mb-3 text-secondary">Simulacros de Emergencia</h2>
+        <p class="mb-3">
+          Durante el viaje, se realizarán simulacros de emergencia para que
+          todos los pasajeros conozcan los procedimientos y rutas de evacuación.
+          Tu participación es obligatoria para garantizar tu seguridad.
+        </p>
+
+        <button class="btn btn-primary mt-4">
+          <a
+            href="/pages/principal/principal.html"
+            class="text-white text-decoration-none"
+            >Volver al Inicio</a
+          >
+        </button>
+      </section>
+    </main>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76A4k5ZZuB3L3/1bniAt+PHFQBl+HG5RT2CB2LaG1zLVnl1Q9ll18GfQL3yWMOe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76A4k5ZZuB3L3/1bniAt+PHFQBl+HG5RT2CB2LaG1zLVnl1Q9ll18GfQL3yWMOe"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+     
+      function activarProtocoloTitanic() {
+       
+        try {
+          var audio = new Audio("imgalerta_titanic.mp3"); 
+          audio
+            .play()
+            .catch((error) =>
+              console.error("Error al reproducir el audio:", error)
+            );
+        } catch (error) {
+          console.error("Error en la reproducción de audio:", error);
+        }
+
+      
+        alert(
+          "PROTOCOLO TITANIC ACTIVADO DIRIGIRSE A LA PROA (PUNTA DELANTERA) PARA SU EVACUACION"
+        );
+
+       
+
+        document.body.style.backgroundColor = "#dc3545"; 
+
+     
+        var leyenda = document.createElement("div");
+        leyenda.innerText = "PROTOCOLO TITANIC ACTIVADO";
+        leyenda.style.position = "fixed";
+        leyenda.style.bottom = "20px";
+        leyenda.style.left = "50%";
+        leyenda.style.transform = "translateX(-50%)";
+        leyenda.style.fontSize = "24px";
+        leyenda.style.color = "#fff";
+        leyenda.style.fontWeight = "bold";
+        leyenda.style.zIndex = "9999";
+        leyenda.style.textAlign = "center";
+        // Agregar la leyenda al body
+        document.body.appendChild(leyenda);
+      }
+    </script>
+  </body>
+</html>

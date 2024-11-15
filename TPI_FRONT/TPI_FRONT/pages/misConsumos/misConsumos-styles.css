@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "Breathing";
+    src: url("/tipograph/Breathing.ttf") format("truetype");
+}
+
+/* General */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222222;
+    height: 100vh;
+    
+    width: 100%;
+}
+
+.header-area {
+    background-color: #084256;
+    padding: 10px;
+}
+
+.header-area .navbar-brand img {
+    width: 90px;
+}
+
+.cf{
+    font-family: "Breathing", sans-serif;
+    color:  #cb8f14;
+    font-size: 1.7rem;
+}
+
+.mis{
+    font-family: 'Raleway', sans-serif;
+    color: #f4f4f4;
+}
+
+.mis :hover{
+    color: #cb8f14;
+}
+
+.nav-link.dropdown-toggle:hover {
+    color: #cb8f14; 
+    background-color: transparent; 
+}
+.nav-link.dropdown-toggle:focus {
+    color:inherit; 
+    background-color: transparent; 
+}
+
+.nav-link.dropdown-toggle:visited {
+    color:inherit; 
+    background-color: transparent; 
+}
+
+
+.titulo{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 600;
+    font-size: 3.9rem;
+    color: #073342;
+    font-weight: 550;
+}
+
+.titulo2{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #073342;
+    font-weight: 550;
+
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    
+}
+
+.imgT{
+    width: 65%;
+}
+
+.card{
+    border-radius: 10px;
+    border-color: #084256;
+    border-width: 2px;
+    box-shadow: 2px 2px 6px #073342;
+    margin: 25px;
+}
+
+.card-body{
+    padding-top: 25px;
+}
+
+.card-title{
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.card-text{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+}
+.card-subtitle{
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.total{
+    background-color:#084256;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    text-align: end;
+    color: #f4f4f4;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+}
+
+.consumoT{
+    background-color: #DC143C;
+    width: 500px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #f4f4f4;
+    font-family: 'Pompiere', sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+
+.btn-submit {
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.3rem;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #cb8f14;
+    border-style: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.btn-submit :hover{
+    font-weight: bolder;
+}
+
+.table-responsive {
+    margin-top: 1.5rem;
+}
+
+
+footer {
+    background-color: #084256;
+    
+    color: #f4f4f4;
+}
+
+footer p{
+    font-size: 0.8rem;
+}
+
+
+
+/* Ajustes generales de margenes y espaciado para dispositivos pequeños */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .table th, .table td {
+        padding: 0.5rem;
+    }
+}

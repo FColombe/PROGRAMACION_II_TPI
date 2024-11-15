@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Perfil - Costa Fascinosa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pompiere&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="miPerfil-styles.css">
+</head>
+
+<body>
+  <header class="header-area">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/TPI_FRONT/pages/principal.html">
+          <img src="/img/Logo.png" alt="Logo">
+        </a>
+        <h1 class="cf">Costa Fascinosa</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mis"><a class="nav-link mis" href="/pages/principal/principal.html">Inicio</a>
+            </li>
+            <li class="nav-item mis">
+              <a class="nav-link mis" href="../Actividades/actividades.html">Actividades</a>
+            </li>
+            <li class="nav-item mis"><a class="nav-link mis"
+                href="/pages/ServiciosGastronomicos/serviciosGastronomicos.html">Gastronomía</a></li>
+            <li class="nav-item mis"><a class="nav-link mis" href="/pages/Amenities/amenities.html">Amenities</a></li>
+            <li class="nav-item dropdown mis">
+              <a class="nav-link dropdown-toggle mis" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Más Opciones</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../misReservas/misReservas.html">Mis Reservas</a></li>
+                <li><a class="dropdown-item" href="../misConsumos/misConsumos.html">Mis Consumos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mis"><a class="nav-link mis" href="/pages/acercaDe/acercaDe.html">Acerca
+                De</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="pb-5 ms-2">
+    <div class="row mt-4">
+      <div class="col-6 pt-5">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div>
+            <video src="/img/Ventana.mp4" autoplay loop muted playsinline></video> 
+          </div>
+          <div class="card1 d-flex flex-column justify-content-center mt-5 mb-3">
+            <h4 class="mt-4 fw-bold"> Usuario: </h4>
+            <h3 id="username" class="mt-2 mb-4"><strong></strong></h3>
+          </div>
+        </div>
+        <div>
+          <div class="mt-5 pt-4 text-center">
+            <a href="#" class="btn-toc" data-bs-toggle="modal" data-bs-target="#changePasswordModal">Cambiar contraseña</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 mt-5">
+        <div class="col-md-8 mt-5">
+          <div class="card shadow p-4 pb-1">
+            <div class="info">
+              <h4 class="text-center">Información Personal</h4>
+            </div>
+            <div class="lis">
+              <p>Nombre: <span id="nombre"></span></p>
+              <p>Apellido: <span id="apellido"></span></p>
+            </div>
+            <div class="info">
+              <h4 class="text-center">Información General</h4>
+            </div>
+            <div class="lis">
+              <p>Nro de habitación: <span id="habitacion"></span></p>
+              <p>Zona: <span id="zona"></span></p>
+              <p>Estado: <span id="estado"></span></p>
+              <p>Fecha de abordo: <span id="fechaInicio"></span></p>
+              <p>Fecha fin: <span id="fechaFin"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="changePasswordModalLabel">Cambiar Contraseña</h5>
+            <button data-bs-target="#changePasswordModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="changePasswordForm">
+              
+              <div class="mb-3">
+                <label for="newPassword" class="form-label">Nueva Contraseña</label>
+                <input type="password" class="form-control" id="newPassword" required>
+              </div>
+              <div class="mb-3">
+                <label for="confirmNewPassword" class="form-label">Confirmar Nueva Contraseña</label>
+                <input type="password" class="form-control" id="confirmNewPassword" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button data-bs-target="#changePasswordModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn1" id="savePasswordBtn">Guardar Cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="text-white text-center pt-3 mt-5 pb-1">
+    <p>&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../miPerfil/miPerfil-App.js"></script> <!-- Aquí cargamos el JS que hará la llamada a la API -->
+</body>
+
+</html>

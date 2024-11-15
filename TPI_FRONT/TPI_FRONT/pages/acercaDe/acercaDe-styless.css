@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "Breathing";
+    src: url("/tipograph/Breathing.ttf") format("truetype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #343a40;
+}
+
+.header-area {
+    background-color: #084256;
+    padding: 10px;
+}
+
+.header-area .navbar-brand img {
+    width: 90px;
+}
+
+.cf {
+    font-family: "Breathing", sans-serif;
+    color: #cb8f14;
+    font-size: 1.7rem;
+}
+
+.mis {
+    font-family: 'Raleway', sans-serif;
+    color: #f4f4f4;
+}
+
+.mis :hover {
+    color: #cb8f14;
+}
+
+.nav-link.dropdown-toggle:hover {
+    color: #cb8f14;
+    background-color: transparent;
+}
+
+.nav-link.dropdown-toggle:focus {
+    color: inherit;
+    background-color: transparent;
+}
+
+.nav-link.dropdown-toggle:visited {
+    color: inherit;
+    background-color: transparent;
+}
+
+
+.cf1 {
+    font-family: "Breathing", sans-serif;
+    color: #cb8f14;
+    font-size: 2rem;
+}
+
+.titulo{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: bolder;
+    font-size: 4.5rem;
+    color:#073342;
+    font-weight: 550;
+}
+
+.titulo2 h3{
+    font-family: 'Pompiere', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #DC143C;
+    font-weight: 550;
+}
+
+.texto{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+}
+
+.esplora{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.btn-toc{
+    font-family: 'Pompiere', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    width: 25%;
+    border-radius: 10px;
+    background-color: #DC143C;
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.integrante-card {
+    width: 300px; 
+
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.integrante-card h4 {
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.5rem;  
+    margin-top: 20px; 
+}
+
+.integrante-card p {
+    font-family: 'Raleway', sans-serif;;
+    font-size: 0.9rem; 
+    margin-top: 5px; 
+}
+
+
+.integrante-img {
+    width: 50%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.git{
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.3rem;
+}
+
+
+
+footer {
+    background-color: #084256;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,660 @@
+CREATE DATABASE COSTA_FASCINOSA22
+GO
+USE COSTA_FASCINOSA22
+GO
+
+CREATE TABLE TIPOS_DOCUMENTOS(
+id_tipo_doc int identity(1,1),
+tipo varchar(50)
+CONSTRAINT PK_TIPOS_DOCUMENTOS PRIMARY KEY (id_tipo_doc)
+);
+
+CREATE TABLE ESTADOS(
+id_estado int identity(1,1),
+descripcion varchar(100)
+CONSTRAINT PK_ESTADOS PRIMARY KEY (id_estado)
+);
+
+CREATE TABLE TIPOS_HABITACIONES(
+id_tipo_habitacion int identity(1,1),
+tipo varchar(100)
+CONSTRAINT PK_TIPOS_HABITACIONES PRIMARY KEY (id_tipo_habitacion)
+);
+
+CREATE TABLE ZONAS(
+id_zona int identity(1,1),
+descripcion varchar(50),
+piso int
+CONSTRAINT PK_ZONAS PRIMARY KEY (id_zona)
+);
+
+CREATE TABLE HABITACIONES(
+nro_habitacion int identity(1,1),
+descripcion varchar(500),
+id_tipo_habitacion int,
+id_zona int
+CONSTRAINT PK_HABITACIONES PRIMARY KEY (nro_habitacion),
+CONSTRAINT FK_HABITACIONES_ZONAS FOREIGN KEY (id_zona) REFERENCES ZONAS (id_zona),
+CONSTRAINT FK_HABITACIONES_TIPO_HABITACIONES FOREIGN KEY (id_tipo_habitacion) REFERENCES TIPOS_HABITACIONES (id_tipo_habitacion)
+);
+
+CREATE TABLE NACIONALIDADES(
+id_nacionalidad int identity(1,1),
+descripcion varchar(100)
+CONSTRAINT PK_NACIONALIDADES PRIMARY KEY (id_nacionalidad)
+);
+
+CREATE TABLE PASAJEROS
+(id_pasajero int identity(1,1),
+nombre  varchar(100),
+apellido varchar(100),
+id_tipo_documento int,
+nro_documento int,
+nacionalidad int,
+fecha_nac datetime,
+sexo char,
+fecha_abordo datetime,
+fecha_desbordo datetime,
+id_estado int,
+nro_habitacion int
+CONSTRAINT PK_PASAJEROS PRIMARY KEY (id_pasajero)
+CONSTRAINT FK_PASAJEROS_TIPO_DOCUMENTO FOREIGN KEY (id_tipo_documento) REFERENCES TIPOS_DOCUMENTOS (id_tipo_doc),
+CONSTRAINT FK_PASAJEROS_NACIONALIDAD FOREIGN KEY (nacionalidad) REFERENCES NACIONALIDADES (id_nacionalidad),
+CONSTRAINT FK_PASAJEROS_ESTADOS FOREIGN KEY (id_estado) REFERENCES ESTADOS (id_estado),
+CONSTRAINT FK_PASAJEROS_HABITACIONES FOREIGN KEY (nro_habitacion) REFERENCES HABITACIONES(nro_habitacion)
+);
+
+CREATE TABLE TIPO_CONTACTOS(
+id_tipo_contacto int identity(1,1),
+descripcion varchar(50),
+CONSTRAINT PK_TIPOS_CONTACTOS PRIMARY KEY (id_tipo_contacto)
+);
+
+CREATE TABLE CONTACTOS(
+id_contacto int identity (1,1),
+id_pasajero int,
+id_tipo_contacto int,
+contacto varchar(100)
+CONSTRAINT PK_CONTACTOS PRIMARY KEY (id_contacto),
+CONSTRAINT FK_CONTACTOS_PASAJEROS FOREIGN KEY (id_pasajero) REFERENCES PASAJEROS (id_pasajero),
+CONSTRAINT FK_CONTACTOS_TIPO_CONTACTOS FOREIGN KEY (id_tipo_contacto) REFERENCES TIPO_CONTACTOS (id_tipo_contacto)
+);
+
+CREATE TABLE USUARIOS
+(id_usuario int identity(1,1),
+nombre varchar(50),
+contraseña int,
+id_pasajero int
+CONSTRAINT PK_USUARIOS PRIMARY KEY (id_usuario),
+CONSTRAINT FK_USUARIOS_PASAJEROS FOREIGN KEY (id_pasajero) REFERENCES PASAJEROS (id_pasajero)
+);
+
+CREATE TABLE DESTINATARIOS
+(id_destinatario int identity(1,1),
+descripcion varchar (50),
+CONSTRAINT PK_DESTINATARIOS PRIMARY KEY (id_destinatario)
+);
+CREATE TABLE CATEGORIAS
+(id_categoria int identity(1,1),
+descripcion varchar (50)
+CONSTRAINT PK_CATEGORIA PRIMARY KEY (id_categoria)
+);
+
+CREATE TABLE COORDINADORES
+(id_coordinador int identity(1,1),
+nombre varchar(100),
+apellido varchar(100),
+fecha_nac datetime,
+nacionalidad int 
+CONSTRAINT PK_COORDINADORES PRIMARY KEY (id_coordinador),
+CONSTRAINT FK_COORDINADORES_NACIONALIDADES FOREIGN KEY (nacionalidad) REFERENCES nacionalidades(id_nacionalidad)
+);
+
+CREATE TABLE COD_VESTIMENTAS(
+id_cod_vestimenta int identity(1,1),
+descripcion varchar(50)
+CONSTRAINT PK_COD_VESTIMENTAS PRIMARY KEY (id_cod_vestimenta)
+);
+
+CREATE TABLE TURNOS
+(id_turno int identity(1,1),
+turno varchar(50),
+franja_horaria varchar(50)
+CONSTRAINT PK_TURNOS PRIMARY KEY (id_turno)
+);
+
+
+
+CREATE TABLE ACTIVIDADES
+(id_actividad int identity(1,1),
+nombre varchar(100),
+descripcion  varchar(300),
+id_categoria int,
+duracion varchar(100),
+id_turno int,
+id_destinatario int,
+id_coordinador int,
+id_cod_vestimenta int,
+id_zona int,
+cupo_max int,
+requiere_reserva binary,
+costo decimal(10,2)
+CONSTRAINT PK_ACTIVIDAD PRIMARY KEY (id_actividad),
+CONSTRAINT FK_ACTIVIDADES_CATEGORIAS FOREIGN KEY (id_categoria) REFERENCES CATEGORIAS (id_categoria),
+CONSTRAINT FK_ACTIVIDADES_DESTINATARIOS FOREIGN KEY (id_destinatario) REFERENCES  DESTINATARIOS (id_destinatario),
+CONSTRAINT FK_ACTIVIDADES_COORDINADORES FOREIGN KEY (id_coordinador) REFERENCES COORDINADORES (id_coordinador),
+CONSTRAINT FK_ACTIVIDADES_COD_VESTIMENTAS FOREIGN KEY (id_cod_vestimenta) REFERENCES COD_VESTIMENTAS (id_cod_vestimenta ),
+CONSTRAINT FK_ACTIVIDADES_ZONAS FOREIGN KEY (id_zona) REFERENCES ZONAS (id_zona),
+CONSTRAINT FK_ACTIVIDADES_TURNOS FOREIGN KEY (id_turno) REFERENCES TURNOS (id_turno)
+);
+
+CREATE TABLE TIPOS_SERVICIOS
+(id_tipo_servicio int identity(1,1),
+tipo_servicio varchar(100)
+CONSTRAINT PK_TIPOS_SERVICIOS PRIMARY KEY (id_tipo_servicio)
+);
+CREATE TABLE TEMATICAS(
+id_tematica int identity (1,1),
+descripcion varchar(100)
+CONSTRAINT PK_TIPOS_RESTAURANTES PRIMARY KEY (id_tematica)
+);
+CREATE TABLE PREFERENCIAS_ALIMENTICIAS (
+id_preferencia int identity(1,1),
+preferencia varchar (100),
+CONSTRAINT PK_PREFERENCIAS_ALIMENTICIAS PRIMARY KEY (id_preferencia)
+);
+
+CREATE TABLE SERVICIOS_GASTRONOMICOS 
+(id_servicio int identity(1,1),
+nombre varchar(100),
+descripcion varchar(300),
+id_tipo_servicio int,
+id_tematica int,
+id_preferencia int, 
+apto_celiaquia binary,
+id_destinatario int,
+id_cod_vestimenta int,
+id_turno_apertura int,
+id_zona int,
+cupo_max int,
+requiere_reserva binary,
+CONSTRAINT PK_SERVICIOS_GASTRONOMICOS PRIMARY KEY (id_servicio),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_TIPOS_SERVICIOS FOREIGN KEY (id_tipo_servicio)
+REFERENCES TIPOS_SERVICIOS(id_tipo_servicio),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_TEMATICAS FOREIGN KEY (id_tematica) REFERENCES TEMATICAS (id_tematica),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_PREFERENCIAS_ALIMENTICIAS FOREIGN KEY (id_preferencia)
+REFERENCES PREFERENCIAS_ALIMENTICIAS(id_preferencia),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_DESTINATARIOS FOREIGN KEY (id_destinatario) REFERENCES DESTINATARIOS (id_destinatario),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_COD_VESTIMENTA FOREIGN KEY (id_cod_vestimenta) REFERENCES COD_VESTIMENTAS (id_cod_vestimenta),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_TURNOS FOREIGN KEY (id_turno_apertura) REFERENCES TURNOS (id_turno),
+CONSTRAINT FK_SERVICIOS_GASTRONOMICOS_ZONAS FOREIGN KEY (id_zona) REFERENCES ZONAS (id_zona)
+);
+
+CREATE TABLE AMENITIES
+(id_amenitie int identity(1,1),
+nombre varchar(100),
+descripcion  varchar(300),
+id_categoria int,
+id_turno int,
+id_destinatario int,
+id_cod_vestimenta int,
+id_zona int
+CONSTRAINT PK_AMENITIES PRIMARY KEY (id_amenitie),
+CONSTRAINT FK_AMENITIES_CATEGORIAS FOREIGN KEY (id_categoria) REFERENCES CATEGORIAS (id_categoria),
+CONSTRAINT FK_AMENITIES_TURNOS FOREIGN KEY (id_turno) REFERENCES TURNOS (id_turno),
+CONSTRAINT FK_AMENITIES_DESTINATARIOS FOREIGN KEY (id_destinatario) REFERENCES  DESTINATARIOS (id_destinatario),
+CONSTRAINT FK_AMENITIES_COD_VESTIMENTAS FOREIGN KEY (id_cod_vestimenta) REFERENCES COD_VESTIMENTAS (id_cod_vestimenta),
+CONSTRAINT FK_AMENITIES_ZONAS FOREIGN KEY (id_zona) REFERENCES ZONAS (id_zona)
+);
+
+CREATE TABLE RESENAS_ACTIVIDADES
+(id_resena_act int identity(1,1),
+comentario varchar(300),
+puntuacion int,
+id_actividad int,
+id_usuario int,
+fecha datetime
+CONSTRAINT PK_RESENAS_ACTIVIDADES PRIMARY KEY (id_resena_act),
+CONSTRAINT FK_RESENAS_ACTIVIDADES_ACTIVIDADES FOREIGN KEY (id_actividad) REFERENCES ACTIVIDADES (id_actividad), 
+CONSTRAINT FK_RESENAS_ACTIVIDADES_USUARIOS FOREIGN KEY (id_usuario) REFERENCES USUARIOS (id_usuario)
+);
+
+CREATE TABLE RESENAS_AMENITIES
+(id_resena_amenitie int identity(1,1),
+comentario varchar(300),
+puntuacion int,
+id_amenitie int,
+id_usuario int,
+fecha datetime
+CONSTRAINT PK_RESENAS_AMENITIE PRIMARY KEY (id_resena_amenitie),
+CONSTRAINT FK_RESENAS_AMENITIES_AMENITIES FOREIGN KEY (id_amenitie) REFERENCES AMENITIES  (id_amenitie), 
+CONSTRAINT FK_RESENAS_AMENITIES_USUARIOS FOREIGN KEY (id_usuario) REFERENCES USUARIOS (id_usuario)
+);
+
+CREATE TABLE RESENAS_SERVICIOS (
+id_resena_serv int identity(1,1),
+comentario varchar(200),
+puntuacion int,
+id_servicio int,
+id_usuario int,
+fecha datetime
+CONSTRAINT PK_RESENAS_SERVICIOS PRIMARY KEY (id_resena_serv),
+CONSTRAINT FK_RESENA_SERVICIOS_SERVICIOS_GASTRONOMICOS FOREIGN KEY (id_servicio) REFERENCES SERVICIOS_GASTRONOMICOS (id_servicio),
+CONSTRAINT FK_RESENA_SERVICIOS_USUARIOS FOREIGN KEY(id_usuario) REFERENCES USUARIOS(id_usuario)
+);
+
+
+CREATE TABLE CONSUMOS_HABITACIONES
+(id_consumo int identity(1,1),
+nro_habitacion int, 
+id_usuario int, 
+fecha datetime, 
+CONSTRAINT PK_CONSUMOS_HAB PRIMARY KEY (id_consumo),
+CONSTRAINT FK_CONS_HAB FOREIGN KEY (nro_habitacion)
+REFERENCES  HABITACIONES(nro_habitacion),
+CONSTRAINT FK_CONS_USUARIO FOREIGN KEY (id_usuario)
+REFERENCES USUARIOS(id_usuario));
+
+
+CREATE TABLE RESERVAS_ACTIVIDADES
+(id_reserva_act int identity(1,1),
+id_actividad int,
+id_consumo int,
+fecha_reservada datetime,
+cantidad_reservada int,
+costo_unitario decimal(10, 2)
+CONSTRAINT PK_RESERVAS_ACTIVIDADES PRIMARY KEY (id_reserva_act),
+CONSTRAINT FK_RESERVAS_ACT_ACT FOREIGN KEY (id_actividad) 
+REFERENCES ACTIVIDADES (id_actividad), 
+CONSTRAINT FK_RESERVAS_ACT_CONS FOREIGN KEY (id_consumo)
+REFERENCES CONSUMOS_HABITACIONES(id_consumo)
+);
+
+
+
+CREATE TABLE RESERVAS_SERVICIOS
+(id_reserva_serv int identity(1,1),
+id_usuario int,
+id_servicio int,
+fecha datetime,
+cantidad_reservada int
+CONSTRAINT PK_RESERVAS_SERVICIOS PRIMARY KEY (id_reserva_serv),
+CONSTRAINT FK_RESERVAS_SERVICIOS_USUARIOS FOREIGN KEY (id_usuario) REFERENCES USUARIOS (id_usuario),
+CONSTRAINT FK_RESERVAS_SERVICIOS_SERVICIOS_GASTRONOMICOS FOREIGN KEY (id_servicio) REFERENCES SERVICIOS_GASTRONOMICOS (id_servicio)
+);
+
+
+CREATE TABLE TIPOS_PRODUCTOS
+(id_tipo_producto int identity(1,1),
+tipo varchar(100),
+CONSTRAINT PK_TIPOS_PRODUCTOS PRIMARY KEY (id_tipo_producto)
+);
+
+CREATE TABLE PRODUCTOS_GASTRONOMICOS
+(id_producto int identity(1,1),
+id_servicio int,
+nombre varchar(100),
+descripcion varchar(300),
+id_tipo_producto int,
+precio decimal(10,2)		
+CONSTRAINT PK_PRODUCTOS_GASTRONOMICOS PRIMARY KEY (id_producto),
+CONSTRAINT FK_PRODUCTOS_GASTRONOMICOS_SERVICIOS_GASTRONOMICOS FOREIGN KEY (id_servicio)
+REFERENCES SERVICIOS_GASTRONOMICOS(id_servicio),
+CONSTRAINT FK_PRODUCTOS_GASTRONOMICOS_TIPOS_PRODUCTOS  FOREIGN KEY (id_tipo_producto)
+REFERENCES TIPOS_PRODUCTOS(id_tipo_producto)
+);
+
+
+CREATE TABLE CONSUMOS_GASTRONOMICOS
+(id_consumo_gastronomico int identity(1,1),
+id_consumo int, 
+id_producto int,
+cantidad int,
+precio decimal(10,2),
+CONSTRAINT PK_CONSUMOS_GASTRONOMICOS PRIMARY KEY (id_consumo_gastronomico),
+CONSTRAINT FK_CONSUMOS_GASTRONOMICOS_CONSUMOS_HABITACIONES FOREIGN KEY (id_consumo)
+REFERENCES CONSUMOS_HABITACIONES(id_consumo),
+CONSTRAINT FK_CONSUMOS_GASTRONOMICOS_PRODUCTOS_GASTRONOMICOS FOREIGN KEY (id_producto)
+REFERENCES PRODUCTOS_GASTRONOMICOS(id_producto)
+);
+
+
+ALTER TABLE RESERVAS_ACTIVIDADES
+DROP CONSTRAINT FK_RESERVAS_ACT_CONS;
+
+ALTER TABLE RESERVAS_ACTIVIDADES
+ADD CONSTRAINT FK_RESERVAS_ACT_CONS
+FOREIGN KEY (Id_Consumo) REFERENCES CONSUMOS_HABITACIONES(Id_Consumo)
+ON DELETE CASCADE;
+
+alter table consumos_gastronomicos
+drop constraint FK_CONSUMOS_GASTRONOMICOS_CONSUMOS_HABITACIONES
+
+alter table consumos_gastronomicos 
+add constraint FK_CONSUMOS_GASTRONOMICOS_CONSUMOS_HABITACIONES
+foreign key (id_consumo) references consumos_habitaciones(id_consumo)
+on delete cascade
+
+
+
+
+
+
+
+--------------INSERTS----------------------
+
+
+insert into TIPOS_DOCUMENTOS (tipo) values ('Documento')
+insert into TIPOS_DOCUMENTOS (tipo) values ('Pasaporte')
+
+
+insert into ESTADOS (descripcion) values ('ABORDO');
+insert into ESTADOS (descripcion) values ('EN TIERRA FIRME');
+insert into ESTADOS (descripcion) values ('VIAJE FINALIZADO');	
+
+
+insert into TIPOS_HABITACIONES (tipo) values ('Deluxe');
+insert into TIPOS_HABITACIONES (tipo) values ('Standard');
+insert into TIPOS_HABITACIONES (tipo) values ('Doble');
+insert into TIPOS_HABITACIONES (tipo) values ('Familiar');
+insert into TIPOS_HABITACIONES (tipo) values ('Suite');
+insert into TIPOS_HABITACIONES (tipo) values ('Simple');
+
+
+insert into ZONAS (descripcion, piso) values ('ROJA', 1)
+insert into ZONAS (descripcion, piso) values ('ROJA', 2)
+insert into ZONAS (descripcion, piso) values ('ROJA', 3)
+insert into ZONAS (descripcion, piso) values ('AZUL', 1)
+insert into ZONAS (descripcion, piso) values ('AZUL', 2)
+insert into ZONAS (descripcion, piso) values ('AZUL', 3)
+insert into ZONAS (descripcion, piso) values ('AMARILLA', 1)
+insert into ZONAS (descripcion, piso) values ('AMARILLA', 2)
+insert into ZONAS (descripcion, piso) values ('AMARILLA', 3)
+insert into ZONAS (descripcion, piso) values ('VERDE', 1)
+insert into ZONAS (descripcion, piso) values ('VERDE', 2)
+insert into ZONAS (descripcion, piso) values ('NARANJA', 1)
+insert into ZONAS (descripcion, piso) values ('NARANJA', 2)
+insert into ZONAS (descripcion, piso) values ('NARANJA', 3)
+
+
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al mar', 1, 9);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas de plaza y media, 1 cama matrimonial', 4, 1);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al parque acuático', 2, 3);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas individuales', 3, 5);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas individuales', 3, 5);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Cama king, jacuzzi y balcón', 5, 6);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('1 Cama de plaza y media', 6, 8);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al mar', 1, 9);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas de plaza y media, 1 cama matrimonial', 4, 1);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al parque acuático', 2, 3);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas individuales', 3, 5);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Cama king, jacuzzi y balcón', 5, 6);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('1 Cama de plaza y media', 6, 8);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al mar', 1, 2);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas de plaza y media, 1 cama matrimonial', 4, 7);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al parque acuático', 2, 4);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas individuales', 3, 6);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Cama king, jacuzzi y balcón', 5, 9);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('1 Cama de plaza y media', 6, 3);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('Ventanal con vista al mar', 1, 5);
+insert into HABITACIONES (descripcion, id_tipo_habitacion, id_zona) values ('2 camas de plaza y media, 1 cama matrimonial', 4, 8);
+
+
+
+insert into NACIONALIDADES(descripcion) values ('ARGENTINA')
+insert into NACIONALIDADES(descripcion) values ('BRASIL')
+insert into NACIONALIDADES(descripcion) values ('URUGUAY')
+insert into NACIONALIDADES(descripcion) values ('COLOMBIA')
+insert into NACIONALIDADES(descripcion) values ('CHILE')
+insert into NACIONALIDADES(descripcion) values ('BOLIVIA')
+insert into NACIONALIDADES(descripcion) values ('ESTADOS UNIDOS')
+
+
+SET DATEFORMAT ymd
+
+insert into PASAJEROS (nombre, apellido, id_tipo_documento, nro_documento, nacionalidad, fecha_nac, sexo, fecha_abordo, fecha_desbordo, id_estado, nro_habitacion) 
+values  
+('Juan', 'Pérez', 1, 12345678, 1, '1985-06-15', 'M', '2024-11-12', '2024-11-22', 1, 1),
+('María', 'Gómez', 2, 87654321, 2, '1990-02-20', 'F', '2024-11-07', '2024-11-07', 1, 2),
+('Carlos', 'Rodríguez', 1, 23456789, 3, '1975-11-30', 'M', '2024-11-08', '2024-11-17', 1, 3),
+('Ana', 'López', 2, 98765432, 4, '1988-07-07', 'F', '2024-09-04', '2024-09-18', 3, 4),
+('Luis', 'Martínez', 1, 34567890, 5, '1995-03-15', 'M', '2024-09-05', '2024-09-19', 3, 5),
+('Sofía', 'Méndez', 2, 11223344, 1, '1992-08-22', 'F', '2024-09-01', '2024-09-20', 3, 1),
+('Jorge', 'Ramírez', 1, 55667788, 2, '1983-12-10', 'M', '2024-09-07', '2024-09-21', 3, 2),
+('Lucía', 'Fernández', 2, 99887766, 3, '1997-04-02', 'F', '2024-09-08', '2024-09-22', 3, 3),
+('Esteban', 'Schon',1,25841058,1,'1982-06-14','M','2024-09-02', '2024-09-16',3,9),
+('Pamela', 'Schon',1,45745894,1,'2005-09-03','F','2024-09-02', '2024-09-16',2,8),
+('Gabriela', 'Torres', 1, 33221144, 4, '1985-12-05', 'F', '2024-08-20', '2024-09-01', 1, 1),
+('Carlos', 'López', 1, 18887766, 4, '1983-03-10', 'M', '2024-08-20', '2024-09-01', 1, 7),
+('Joaquín', 'López Torres', 2, 45897127, 4, '2015-04-15', 'M', '2024-08-20', '2024-09-01', 1, 4),
+('Martina', 'López Torres', 2, 50748309, 4, '2018-09-12', 'F', '2024-08-20', '2024-09-01', 1, 5),
+('Miguel', 'Navarro', 1, 44556677, 2, '1978-05-18', 'M', '2024-08-25', '2024-09-10', 2, 6),
+('María', 'González', 1, 11224433, 2, '1980-10-21', 'F', '2024-08-25', '2024-09-10', 2, 4),
+('Santiago', 'Navarro González', 2, 77889900, 2, '2008-11-01', 'M', '2024-08-25', '2024-09-10', 2, 8),
+('Laura', 'Paredes', 2, 99884455, 2, '1992-07-31', 'F', '2024-09-05', '2024-09-20', 1, 3), ('Felipe', 'Arias', 1, 22334455, 4, '1989-04-19', 'M', '2024-09-07', '2024-09-22', 2, 5), 
+('Natalia', 'Montes', 2, 77881122, 5, '1994-11-11', 'F', '2024-01-08', '2024-01-23', 3, 3),
+('Raúl', 'Duarte', 1, 77889911, 5, '1970-10-17', 'M', '2024-02-27', '2024-03-12', 3, 3),
+('Camila', 'Rojas', 2, 11224433, 3, '1999-06-21', 'F', '2024-05-01', '2024-05-15', 3, 4), ('Fernando', 'Ortiz', 1, 33445566, 6, '1980-01-15', 'M', '2024-09-03', '2024-09-18', 1, 5);
+
+insert into TIPO_CONTACTOS (descripcion) values ('Correo electrónico')
+insert into TIPO_CONTACTOS (descripcion) values ('Teléfono')
+
+INSERT INTO CONTACTOS (id_pasajero, id_tipo_contacto, contacto) VALUES
+(1, 2, '+543512869586'),
+(1, 1, 'juan.perez85@gmail.com'), 
+(2, 2, '+5521987654321'),
+(2, 1, 'maria.gomez90@hotmail.com'),
+(3, 2, '+598987654321'),
+(3, 1, 'carlos.rodriguez75@outlook.com'),
+(4, 2, '+573004563211'),
+(4, 1, 'ana.lopez88@correo.com'),
+(5, 2, '+569876543210'),
+(5, 1, 'luis.martinez95@correo.cl'),
+(6, 2, '+543512123456'),
+(6, 1, 'sofia.mendez92@gmail.com'),
+(7, 1, 'jorge.ramirez83@yahoo.com'),
+(8, 2, '+598998761234'),
+(8, 1, 'lucia.fernandez97@correo.uy'),
+(9, 2, '+543411258963'),
+(9, 1, 'esteban.schon82@gmail.com'),
+(10, 2, '+543411256789'),
+(11, 2, '+573218765432'),
+(11, 1, 'gabriela.torres85@hotmail.com'),
+(12, 2, '+573219876543'),
+(12, 1, 'carlos.lopez83@correo.com'),
+(15, 2, '+552138765432'),
+(16, 2, '+552123456789'),
+(17, 2, '+552133344455'),
+(17, 1, 'santiago.navarro08@gmail.com'),
+(18, 2, '+598976543210'),
+(18, 1, 'laura.paredes92@correo.uy'),
+(19, 2, '+569876543210'),
+(19, 1, 'felipe.arias89@gmail.com'),
+(20, 2, '+59161234567'),
+(20, 1, 'natalia.montes94@hotmail.com'),
+(21, 1, 'raul.duarte70@gmail.com'),
+(22, 2, '+12123456789'),
+(22, 1, 'camila.rojas99@yahoo.com'),
+(23, 2, '+541123456789'),
+(23, 1, 'fernando.ortiz80@hotmail.com');
+
+
+
+
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('juanperez', 1234, 1);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('mariagomez', 2345, 2);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('carlosrodriguez', 3456, 3);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('analopez', 4567, 4);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('luismartinez', 5678, 5);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('sofiame', 6789, 6);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('jorgeram', 7890, 7);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('luciaf', 8901, 8);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('estebansc', 1658, 9);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('pamelasc', 1207, 10);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('gabtorres', 8521, 11);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('carlopez', 5321, 12);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('joaqlopez', 3894, 13);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('martilopez', 2541, 14);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('miguelnav', 6987, 15);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('marigonz', 9874, 16);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('santinav', 8513, 17);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('lauparedes', 3578, 18);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('felipearias', 4598, 19);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('natmontes', 2367, 20);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('raulduar', 0265, 21);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('camirojas', 0324, 22);
+insert into USUARIOS (nombre, contraseña, id_pasajero) values ('fernandortiz', 6938, 23);
+
+
+
+
+insert into DESTINATARIOS (descripcion) values ('ATP');
+insert into DESTINATARIOS (descripcion) values ('Adultos (+18 años)');
+insert into DESTINATARIOS (descripcion) values ('Adolescentes (13 a 17 años)');
+insert into DESTINATARIOS (descripcion) values ('Niños');
+insert into DESTINATARIOS (descripcion) values ('Para toda la familia');
+
+
+
+Insert into CATEGORIAS (descripcion) VALUES ('Recreativo');
+Insert into CATEGORIAS (descripcion) VALUES ('Deportivo');
+Insert into CATEGORIAS (descripcion) VALUES ('Cultural');
+Insert into CATEGORIAS (descripcion) VALUES ('Entretenimiento');
+
+insert into COORDINADORES (nombre, apellido, fecha_nac, nacionalidad) 
+values ('Carlos', 'González', '1980-05-14', 1),
+('María', 'Fernández', '1975-11-22', 2),
+('Jorge', 'López', '1988-03-08', 3),
+('Ana', 'Martínez', '1992-07-19', 4),
+('Lucía', 'Ramírez', '1985-01-30', 5),
+('Paula', 'Flores', '1977-05-25', 5),
+('Roberto', 'Pérez', '1982-02-11', 1),
+('Laura', 'García', '1990-08-24', 3),
+('Diego', 'Silva', '1979-11-03', 2),
+('Andrea', 'Torres', '1985-04-12', 6), 
+('Sergio', 'Domínguez', '1978-12-15', 4);
+
+
+
+
+insert into COD_VESTIMENTAS (descripcion) values ('Formal');
+insert into COD_VESTIMENTAS (descripcion) values ('Casual');
+insert into COD_VESTIMENTAS (descripcion) values ('Deportivo');
+insert into COD_VESTIMENTAS (descripcion) values ('Disfraces');
+insert into COD_VESTIMENTAS (descripcion) values ('Sin código'); 
+insert into COD_VESTIMENTAS (descripcion) values ('Gala'); 
+
+insert into TURNOS (turno, franja_horaria) values ('MAÑANA','08:00 a 10:00');
+insert into TURNOS (turno, franja_horaria) values ('MEDIA MAÑANA','10:00 a 12:00');
+insert into TURNOS (turno, franja_horaria) values ('MEDIODÍA','12:00 a 14:00');
+insert into TURNOS (turno, franja_horaria) values ('SIESTA','14:00 a 16:00');
+insert into TURNOS (turno, franja_horaria) values ('TARDE','16:00 a 18:00');
+insert into TURNOS (turno, franja_horaria) values ('MEDIA TARDE','18:00 a 20:00');
+insert into TURNOS (turno, franja_horaria) values ('NOCHECITA','20:00 a 22:00');
+insert into TURNOS (turno, franja_horaria) values ('NOCHE','22:00 a 00:00');
+insert into TURNOS (turno, franja_horaria) values ('MADRUGADA','00: a 06:00');
+
+
+
+Insert into ACTIVIDADES (nombre, descripcion, id_categoria, duracion, id_turno, id_destinatario, id_coordinador, id_cod_vestimenta, id_zona, cupo_max, requiere_reserva, costo) VALUES
+('Fiesta temática de disfraces', 'Fiesta con concurso de disfraces, para divertirse y sacar el lado creativo de cada uno.', 4, '2 h', 4, 3, 2, 4, 12, 50, 1, 2000),
+('Stand Up', 'Show de comedia dirigido por el mejor comediante de todos los cruceros.', 4, '2 h 30 min', 4, 2, 3, 2, 13, 80, 1, 1900),
+('New York Theatrer', 'Espectáculo al estilo de Broadway.', 4, '1 h y 30 min', 8, 2, 5, 1, 13, 100, 1, 4500),
+('Bahía Show', 'Bahía Show presenta un nuevo concepto de entretenimiento que combina impresionantes acrobacias, danza y música en vivo para que los pasajeros vivan una experiencia alucinante.', 4, '1 h', 7, 2, 6, 1, 10, 150, 1, 3000),
+('Carnaval toda la vida', 'Fiesta de carnaval para los viajeros que buscan pura diversión.', 4, '4 h', 9, 2, 10, 1, 11, 150, 1, 2000),
+('Recorrido del museo', 'Recorrido guiado para conocer toda la historia del crucero.', 3, '1 h 30 min', 1, 1, 3, 5, 12, 20, 1, 500),
+('Cata de vinos', 'Prueba con nosotros las mejores cepas de Sudamérica.', 3, '2 h', 7, 2, 11, 1, 12, 20, 1, 5500),
+('Fábrica de chocolates', 'Aprende a hacer los mejores bombones de chocolate que probarás.', 3, '2 h', 5, 4, 4, 2, 5, 30, 1, 2500),
+('Club Bossa Nova', 'Vive la música carioca durante la caída del sol sobre el mar.', 3, '2 h', 6, 1, 2, 2, 5, 50, 1, 2500),
+('Juego del quemado', 'Juego del quemado: trata de golpear con seis pelotas dispuestas para el juego a los rivales del equipo contrario y así eliminarlos.', 1, '1 h', 2, 3, 2, 3, 4, 100, 0, 1500),
+('Yoga al amanecer', 'Empieza el día con las mejores energías practicando yoga en la cubierta.', 1, '1 h', 1, 1, 8, 3, 1, 25, 1, 1800),
+('Búsqueda del tesoro', 'En barco hay un tesoro precioso. ¿Te animas a encontrarlo?.', 1, '1 h y 30 min', 4, 4, 3, 2, 8, 30, 0, 1000),
+('Competencia de arcade', '¿Te gustan los fichines? Esta es tu oportunidad para demostrar tus habilidades!', 1, '1 h y 30 min', 5, 2, 6, 2, 10, 15, 1, 1200),
+('Fuegos artificiales en la cubierta', 'Ven a maravillarte con los fuegos artificiales más luminosos que podrás ver.', 1, '1 h', 7, 1, 9, 2, 14, 200, 0, 0),
+('Competencia de natación', 'Competencia de natación para aquellos que deseen demostrar sus habilidades acuáticas. Es una carrera de punta a punta en una piscina de 25 metros.', 2, '1 h y 30 min', 3, 3, 1, 3, 3, 80, 1, 800),
+('Escalada en muro', 'Competencia de escalada en muro: el que llegue primero en el menor tiempo posible será el ganador.', 2, '2 h', 1, 2, 4, 3, 3, 30, 1, 1300),
+('Tirolesa', 'Vive una aventura aérea en el medio del mar.', 2, '1 h', 2, 2, 3, 3, 6, 20, 1, 2500);
+
+
+
+
+INSERT INTO TIPOS_SERVICIOS (tipo_servicio) VALUES ('Bar o coctelería');
+INSERT INTO TIPOS_SERVICIOS (tipo_servicio) VALUES ('Restaurant');
+INSERT INTO TIPOS_SERVICIOS (tipo_servicio) VALUES ('Fast Food');
+
+
+insert into TEMATICAS (descripcion) values ('Italiana');
+insert into TEMATICAS (descripcion) values ('Mariscos');
+insert into TEMATICAS (descripcion) values ('Parrilla');
+insert into TEMATICAS (descripcion) values ('Brasilera');
+insert into TEMATICAS (descripcion) values ('Mediterránea');
+insert into TEMATICAS (descripcion) values ('Internacional');
+insert into TEMATICAS (descripcion) values ('Los clásicos de siempre');
+
+
+
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Dieta Keto')
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Vegetariana');
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Vegana');
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Sin gluten');
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Dieta Mediterránea');
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Sin lactosa');
+insert into PREFERENCIAS_ALIMENTICIAS (preferencia) values ('Sin preferencias');
+
+
+
+INSERT INTO SERVICIOS_GASTRONOMICOS (nombre, descripcion, id_tipo_servicio, id_tematica, id_preferencia, 
+apto_celiaquia, id_destinatario, id_cod_vestimenta, id_turno_apertura, id_zona, cupo_max, requiere_reserva) VALUES 
+
+('Toc-Toc', 'Servicio a la habitación', 2, 7, 7, 0, 1, 5, 1, 3, 1000, 0),
+('La Gaviota', 'Platos frescos y ligeros', 2, 2, 5, 1, 4, 1, 7, 6, 60, 1),
+('Oasis', 'Sabores exóticos del mar', 2, 2, 5, 1, 1, 4, 7, 2, 150, 1),
+('La Trattoria', 'Auténtica pasta italiana y pizzas', 2, 1, 2, 0, 4, 2, 2, 5, 180, 0),
+('The Cocktail Lounge', 'Cócteles artesanales y música en vivo', 1, 6, 4, 1, 1, 2, 8, 9, 80, 0),
+('El Pescador', 'Los mejores mariscos frescos preparados frente a ti', 2, 2, 5, 1, 1, 1, 7, 7, 60, 1),
+('Veggie Bites', 'Hamburguesas vegetarianas y opciones saludables', 3, 6, 2, 1, 4, 2, 1, 8, 100, 0),
+('La bodeguita', 'Los clásicos argentinos en un solo lugar', 2, 7, 7, 0, 4, 2, 2, 7, 75, 1),
+('Obrigado', 'Comida exótica del Brasil profundo', 2, 4, 7, 1, 4, 2, 7, 13, 50, 1),
+('Vermelho', 'Cócteles típicos de diversas regiones de Brasil', 1, 4, 4, 1, 1, 2, 8, 9, 80, 0);
+
+
+INSERT INTO AMENITIES (nombre, descripcion, id_categoria, id_turno, id_destinatario, id_cod_vestimenta, id_zona) VALUES 
+
+('Piscina principal', 'Gran piscina al aire libre con solárium', 1, 1, 1, 3, 1),
+('Gimnasio', 'Gimnasio completamente equipado con máquinas de cardio y pesas', 2, 2, 2, 3, 2),
+('Spa', 'Tratamientos relajantes y rejuvenecedores', 2, 3, 1, 2, 3),
+('Casino', 'Casino con una amplia variedad de juegos', 4, 4, 2, 2, 4),
+('Sala de juegos', 'Sala de juegos con mesas de billar, ping pong y videojuegos', 1, 1, 3, 2, 5),
+('Biblioteca', 'Amplia biblioteca con una gran variedad de libros', 3, 1, 1, 5, 6);
+
+
+SET DATEFORMAT dmy
+
+
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES ('Bebidas')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES ('Pastas')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES ('Carnes rojas')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES ('Legumbres')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES ('Pescado y mariscos')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES('Pizzas')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES('Sanguches')
+INSERT INTO TIPOS_PRODUCTOS (tipo) VALUES('Verduras')
+
+
+INSERT INTO PRODUCTOS_GASTRONOMICOS (id_servicio, nombre, descripcion, id_tipo_producto, precio) VALUES 
+(1, 'Mojito','Cóctel compuesto de ron, limón, azúcar, menta o hierbabuena y agua mineral con gas',1,9);
+INSERT INTO PRODUCTOS_GASTRONOMICOS (id_servicio, nombre, descripcion, id_tipo_producto, precio) VALUES 
+(1, 'Pizza Especial','Pizza de masa madre con Jamón, morrón, aceitunas, salsa y queso.',6,16);
+INSERT INTO PRODUCTOS_GASTRONOMICOS (id_servicio, nombre, descripcion, id_tipo_producto, precio) VALUES
+ (1, 'Rosbif','Corte de buey tierno que se asa al horno',3,32);
+INSERT INTO PRODUCTOS_GASTRONOMICOS (id_servicio, nombre, descripcion, id_tipo_producto, precio) VALUES
+ (1,'Pizza Muzzarella','Pizza con salsa, queso y aceitunas',6,18);
+INSERT INTO PRODUCTOS_GASTRONOMICOS (id_servicio, nombre, descripcion, id_tipo_producto, precio) VALUES
+ (1, 'Sushi','Combinación de ingredientes envueltos en alga nori y arroz de sushi', 5, 22);
+INSERT INTO PRODUCTOS_GASTRONOMICOS (id_servicio, nombre, descripcion, id_tipo_producto, precio) VALUES
+ (1, 'Escalivada','Un plato compuesto con berenjenas, pimientos, calabacines, cebolla y ajo',8 , 12);
+
+
+
+
+

@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/pages/principal/principal-styles.css">
+</head>
+
+<body>
+    <header class="header-area mb-5">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/TPI_FRONT/pages/principal.html">
+                    <img src="/img/Logo.png" alt="Logo">
+                </a>
+                <h1 class="cf">Costa Fascinosa</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mis">
+                            <a class="nav-link mis" href="../Actividades/actividades.html">Actividades</a>
+                        </li>
+                        <li class="nav-item mis sg"><a class="nav-link mis"
+                                href="/pages/ServiciosGastronomicos/serviciosGastronomicos.html">Gastronomía</a></li>
+                        <li class="nav-item mis"><a class="nav-link mis"
+                                href="/pages/Amenities/amenities.html">Amenities</a></li>
+                        <li class="nav-item dropdown mis">
+                            <a class="nav-link dropdown-toggle mis" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Más Opciones</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/pages/misReservas/misReservas.html">Mis Reservas</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/pages/misConsumos/misConsumos.html">Mis Consumos</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/pages/miPerfil/miPerfil.html">Mi Perfil</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mis"><a class="nav-link mis" href="/pages/acercaDe/acercaDe.html">Acerca
+                                De</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container pt-5">
+        <section class="row">
+            <div class="d-flex flex-row">
+                <div class="col-6">
+                    <h2 class="titulo mb-5">Bienvenido a bordo!</h2>
+                    <p class="texto">Este es tu <span id="diaViaje" class="texto2"> </span></p>
+                    <p class="texto t pt-2">Estamos en las costas de Camboriú</p>
+                    <div class="ub2">
+                        <div class="accordion" id="agendaDiaria">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#agenda-list" aria-expanded="true" aria-controls="agenda-list">
+                                        Mi agenda diaria
+                                    </button>
+                                </h2>
+                                <div id="agenda-list" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#agendaAccordion">
+                                    <div class="accordion-body">
+                                        <ul id="listaActividades">
+                                            <!-- Las actividades se cargarán aquí -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div >
+                </div>
+                <div class="col-6 ub">
+                    <div>
+                        <img src="/img/VELERO.png" class="w-100 "  alt="velero">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="raya"></div>
+        <section>
+            <h2 class="text-start titulo2">Explora nuestras propuestas</h2>
+            <div class="card-list">
+                <a href="../Amenities/amenities.html" class="card text-center mb-5">
+                    <div class="card-body cb" id="tarjetaAmenities">
+                        <h5 class="card-title">Amenities</h5>
+                    </div>
+                </a>
+                <a href="../Actividades/actividades.html" class="card1 text-center mb-5">
+                    <div class="card-body cb2" id="tarjetaActividades">
+                        <h5 class="card-title">Actividades</h5>
+                    </div>
+                </a>
+                <a href="../ServiciosGastronomicos/serviciosGastronomicos.html" class="card2 text-center mb-5">
+                    <div class="card-body cb1" id="tarjetaGastro">
+                        <h5 class="card-title">Experiencias Gastronómicas</h5>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <div class="raya mb-5 mt-5"></div>
+        <section class="Titanic">
+            <a href="/pages/medidasSeguridad/medidaSeguridad.html" class="btn-toc">Medidas de seguridad</a>
+        </section>
+    </main>
+
+    </main>
+    <footer class="text-white text-center pt-4 mt-5 pb-1">
+        <p>&copy; 2024 Costa Fascinosa. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="principal-App.js"></script>
+</body>
+
+</html>

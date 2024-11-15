@@ -1,0 +1,532 @@
+[
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.Actividade",
+    "Method": "Get",
+    "RelativePath": "api/Actividade",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.Actividade",
+    "Method": "Get",
+    "RelativePath": "api/Actividade/Buscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.Amenities",
+    "Method": "Get",
+    "RelativePath": "api/Amenities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.Amenities",
+    "Method": "GetAmeniti",
+    "RelativePath": "api/Amenities/Buscar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLogin",
+        "Type": "CostaFascinosa.Data.usuarioToken",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.CategoriaController",
+    "Method": "Get",
+    "RelativePath": "api/Categoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.CategoriaController",
+    "Method": "Post",
+    "RelativePath": "api/Categoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cat",
+        "Type": "CostaFascinosa.Data.Categoria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.CodVestimentaController",
+    "Method": "GetVestimenta",
+    "RelativePath": "api/CodVestimenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.CodVestimentaController",
+    "Method": "Post",
+    "RelativePath": "api/CodVestimenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vestimenta",
+        "Type": "CostaFascinosa.Data.CodVestimenta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ConsumosGastronomicosController",
+    "Method": "Get",
+    "RelativePath": "api/ConsumosGastronomicos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ConsumosGastronomicosController",
+    "Method": "GetTotales",
+    "RelativePath": "api/ConsumosGastronomicos/TotalConsumo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ConsumosHabitacioneController",
+    "Method": "Get",
+    "RelativePath": "api/ConsumosHabitacione",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ConsumosHabitacioneController",
+    "Method": "Post",
+    "RelativePath": "api/ConsumosHabitacione",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "consumo",
+        "Type": "CostaFascinosa.Data.ConsumosHabitacione",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ConsumosHabitacioneController",
+    "Method": "Delete",
+    "RelativePath": "api/ConsumosHabitacione/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ConsumosHabitacioneController",
+    "Method": "GetTotal",
+    "RelativePath": "api/ConsumosHabitacione/Total",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.CoordinadorController",
+    "Method": "Get",
+    "RelativePath": "api/Coordinador",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.DestinatarioController",
+    "Method": "Get",
+    "RelativePath": "api/Destinatario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.DestinatarioController",
+    "Method": "Post",
+    "RelativePath": "api/Destinatario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dest",
+        "Type": "CostaFascinosa.Data.Destinatario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.PasajeroController",
+    "Method": "Post",
+    "RelativePath": "api/Pasajero",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pasajero",
+        "Type": "CostaFascinosa.Data.Pasajero",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.PrefAlimenticiaController",
+    "Method": "Get",
+    "RelativePath": "api/PrefAlimenticia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.PrefAlimenticiaController",
+    "Method": "Post",
+    "RelativePath": "api/PrefAlimenticia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pref",
+        "Type": "CostaFascinosa.Data.PreferenciasAlimenticia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ProductosGastronomicoController",
+    "Method": "Get",
+    "RelativePath": "api/ProductosGastronomico",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ReservasActividadeController",
+    "Method": "Get",
+    "RelativePath": "api/ReservasActividade",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ReservasActividadeController",
+    "Method": "GetDiaria",
+    "RelativePath": "api/ReservasActividade/Diaria/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ReservasServiciosController",
+    "Method": "GetById",
+    "RelativePath": "api/ReservasServicios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ReservasServiciosController",
+    "Method": "Post",
+    "RelativePath": "api/ReservasServicios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservaServicio",
+        "Type": "CostaFascinosa.Data.ReservasServicio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ReservasServiciosController",
+    "Method": "Delete",
+    "RelativePath": "api/ReservasServicios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ReservasServiciosController",
+    "Method": "GetDate",
+    "RelativePath": "api/ReservasServicios/GetDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ServicioGastronomicoController",
+    "Method": "Get",
+    "RelativePath": "api/ServicioGastronomico",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TematicaController",
+    "Method": "Get",
+    "RelativePath": "api/Tematica",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TematicaController",
+    "Method": "Post",
+    "RelativePath": "api/Tematica",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tema",
+        "Type": "CostaFascinosa.Data.Tematica",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TipoProductoController",
+    "Method": "Get",
+    "RelativePath": "api/TipoProducto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TipoProductoController",
+    "Method": "Post",
+    "RelativePath": "api/TipoProducto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "CostaFascinosa.Data.TiposProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TipoServicioController",
+    "Method": "Get",
+    "RelativePath": "api/TipoServicio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TipoServicioController",
+    "Method": "Post",
+    "RelativePath": "api/TipoServicio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "CostaFascinosa.Data.TiposServicio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TurnoController",
+    "Method": "Get",
+    "RelativePath": "api/Turno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.TurnoController",
+    "Method": "Post",
+    "RelativePath": "api/Turno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turno",
+        "Type": "CostaFascinosa.Data.Turno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.UsuarioController",
+    "Method": "GetUsuarios",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.UsuarioController",
+    "Method": "Put",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contrase\u00F1a",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ZonaController",
+    "Method": "GetZonas",
+    "RelativePath": "api/Zona",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CostaFascinosa.Controllers.ZonaController",
+    "Method": "Post",
+    "RelativePath": "api/Zona",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "zona",
+        "Type": "CostaFascinosa.Data.Zona",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
